@@ -6,7 +6,7 @@ public class Main {
     public class Cliente {
         private Integer idade;
         private final float altura;
-        private final float peso;
+        private float peso;
 
         public Cliente(float altura, float peso) {
             this.altura = altura;
@@ -36,6 +36,11 @@ public class Main {
             } else {
                 System.out.println("IMC: " + imc + "\nObeso grau III ou Mórbido");
             }
+        }
+
+        public void tratamento(Cliente cliente) {
+            cliente.peso += -5;
+            System.out.println("Peso: " + this.peso);
         }
     }
 
