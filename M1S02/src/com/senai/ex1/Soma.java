@@ -1,3 +1,5 @@
+package com.senai.ex1;
+
 import javax.swing.*;
 
 public class Soma {

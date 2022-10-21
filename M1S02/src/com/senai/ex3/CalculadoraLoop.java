@@ -1,32 +1,19 @@
-import javax.swing.*;
-import java.util.ArrayList;
-import java.util.Collection;
+package com.senai.ex3;
 
-public class Main {
+import javax.swing.*;
+
+public class CalculadoraLoop {
     public static void main(String[] args) {
         var numero1 = Integer.parseInt(JOptionPane.showInputDialog("Digite o primeiro número"));
         var numero2 = Integer.parseInt(JOptionPane.showInputDialog("Digite o segundo numero"));
         int resultado = 1;
         var operador = JOptionPane.showInputDialog("Digite o operador");
-        Collection <String> historico =new ArrayList<>();
 
         switch (operador) {
-            case "-" -> {
-                resultado = (numero1 - numero2);
-                historico.add(numero1 +"-"+ numero2 +"=" +resultado);
-            }
-            case "+" -> {
-                resultado = (numero1 + numero2);
-                historico.add(numero1 +"+"+ numero2 +"=" +resultado);
-            }
-            case "/" -> {
-                resultado = (numero1 / numero2);
-                historico.add(numero1 +"/"+ numero2 +"=" +resultado);
-            }
-            case "*" -> {
-                resultado = (numero1 * numero2);
-                historico.add(numero1 +"*"+ numero2 +"=" +resultado);
-            }
+            case "-" -> resultado = (numero1 - numero2);
+            case "+" -> resultado = (numero1 + numero2);
+            case "/" -> resultado = (numero1 / numero2);
+            case "*" -> resultado = (numero1 * numero2);
             default -> System.out.println("Operador incorreto");
         }
         while (!operador.equalsIgnoreCase("fim")) {
@@ -36,30 +23,22 @@ public class Main {
                 case "-" -> {
                     numero2 = Integer.parseInt(JOptionPane.showInputDialog("Digite o numero"));
                     resultado = (resultado - numero2);
-                    historico.add(resultado +"-"+ numero2 +"=" +resultado);
                 }
                 case "+" -> {
                     numero2 = Integer.parseInt(JOptionPane.showInputDialog("Digite o numero"));
                     resultado = (resultado + numero2);
-                    historico.add(resultado +"+"+ numero2 +"=" +resultado);
                 }
                 case "/" -> {
                     numero2 = Integer.parseInt(JOptionPane.showInputDialog("Digite o numero"));
                     resultado = (resultado / numero2);
-                    historico.add(resultado +"/"+ numero2 +"=" +resultado);
                 }
                 case "*" -> {
                     numero2 = Integer.parseInt(JOptionPane.showInputDialog("Digite o numero"));
                     resultado = (resultado * numero2);
-                    historico.add(resultado +"*"+ numero2 +"=" +resultado);
                 }
-                case "fim" -> {
-
-                    historico.add("Resultado Final: "+resultado);
-                    historico.forEach(System.out::println);
-                }
+                case "fim" -> System.out.println("Resultado:" + resultado);
                 default -> System.out.println("Operador incorreto");
             }
         }
     }
-    }
+}

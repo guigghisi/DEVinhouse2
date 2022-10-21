@@ -1,3 +1,5 @@
+package com.senai.ex2;
+
 import javax.swing.*;
 
 public class Calculadora {
