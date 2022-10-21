@@ -5,8 +5,19 @@ import java.util.ArrayList;
 public class Main {
     public class Cliente {
         private Integer idade;
-        private float altura;
-        private float peso;
+        private final float altura;
+        private final float peso;
+
+        public Cliente(float altura, float peso) {
+            this.altura = altura;
+            this.peso = peso;
+        }
+
+        public Cliente(Integer idade, float altura, float peso) {
+            this.idade = idade;
+            this.altura = altura;
+            this.peso = peso;
+        }
 
         public void calculaImc() {
 
@@ -29,9 +40,19 @@ public class Main {
     }
 
     public class Clinica {
-        Cliente cliente = new Cliente();
+        Cliente cliente = new Cliente(2, 2, 2);
         ArrayList<String> clientes = new ArrayList<>();
-        private String nomeDono;
+        private final String nomeDono;
+
+        public Clinica(String nomeDono) {
+            this.nomeDono = nomeDono;
+        }
+
+        public Clinica(Cliente cliente, ArrayList<String> clientes, String nomeDono) {
+            this.cliente = cliente;
+            this.clientes = clientes;
+            this.nomeDono = nomeDono;
+        }
 
 
         public void CategorizarClientes() {
