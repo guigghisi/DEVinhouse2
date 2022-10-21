@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 public class Main {
     public class Cliente {
-        Integer idade;
-        float altura;
-        float peso;
+        private Integer idade;
+        private float altura;
+        private float peso;
 
         public void calculaImc() {
 
@@ -31,7 +31,7 @@ public class Main {
     public class Clinica {
         Cliente cliente = new Cliente();
         ArrayList<String> clientes = new ArrayList<>();
-        String nomeDono;
+        private String nomeDono;
 
 
         public void CategorizarClientes() {
