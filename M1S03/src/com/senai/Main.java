@@ -42,6 +42,11 @@ public class Main {
             cliente.peso += -5;
             System.out.println("Peso: " + this.peso);
         }
+
+        public void tratamento(Cliente cliente, int peso) {
+            cliente.peso += -peso;
+            System.out.println("Peso: " + this.peso);
+        }
     }
 
     public class Clinica {
