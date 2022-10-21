@@ -1,11 +1,13 @@
 package com.senai;
 
+import java.util.ArrayList;
+
 public class Main {
     public class Cliente {
         Integer idade;
         float altura;
         float peso;
-        
+
         public String calculaImc() {
 
             float imc = (this.peso / (this.altura * this.altura));
@@ -26,5 +28,9 @@ public class Main {
         }
     }
 
+    public class Clinica {
+        ArrayList<Cliente> clientes = new ArrayList<>();
+        String nomeDono;
+    }
 
 }
