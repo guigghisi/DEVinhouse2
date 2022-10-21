@@ -1,4 +1,4 @@
-package com.senai.ex1;
+package com.senai;
 
 import javax.swing.*;
 
