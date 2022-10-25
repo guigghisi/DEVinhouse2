@@ -1,0 +1,50 @@
+Index: M1S03/src/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>public class Main {\r\n    public class Cliente {\r\n        Integer idade;\r\n        Float altura;\r\n        Float peso;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/M1S03/src/Main.java b/M1S03/src/Main.java
+--- a/M1S03/src/Main.java	(revision 28f116a750ba334ec2974f8459cd7b0e8abe3394)
++++ b/M1S03/src/Main.java	(date 1665528834869)
+@@ -3,5 +3,39 @@
+         Integer idade;
+         Float altura;
+         Float peso;
++
++        public Cliente(Integer idade, Float altura, Float peso) {
++            this.idade = idade;
++            this.altura = altura;
++            this.peso = peso;
++        }
++    }
++
++    public String calculaIMC(Cliente cliente) {
++        var imc = (cliente.peso / (cliente.altura * cliente.altura));
++        if (imc < 18.5) {
++            return ("Muito Magro");
++
++        } else if (imc >= 18.5 && imc <= 24.9) {
++            return ("Normal");
++
++        } else if (imc >= 25 && imc <= 29.9) {
++            return ("Sobrepeso");
++
++        } else if (imc >= 30 && imc <= 34.9) {
++            return ("Obeso Grau I");
++
++        } else if (imc >= 35 && imc <= 39.9) {
++            return ("Obeso Grau II");
++
++        } else {
++            return ("Obeso Grau III ou Mórbido");
++
++        }
++
++    }
++
++    public static void main(String[] args) {
++        Cliente cliente = new Cliente(21, 1.71, 62);
+     }
+ }
