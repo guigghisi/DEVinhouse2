@@ -19,4 +19,8 @@ public class Coordenador extends Pessoa {
     public void setQuantidadeCursosCoord(Integer quantidadeCursosCoord) {
         this.quantidadeCursosCoord = quantidadeCursosCoord;
     }
+
+    public void obterinformacoes() {
+        System.out.println("Quantidade de cursos: " + quantidadeCursosCoord);
+    }
 }

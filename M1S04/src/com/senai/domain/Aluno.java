@@ -29,4 +29,8 @@ public class Aluno extends Pessoa {
     public void setMatricula(String matricula) {
         this.matricula = matricula;
     }
+
+    public void obterinformacoes() {
+        System.out.println("Curso: " + curso + "\nMatricula: " + matricula);
+    }
 }

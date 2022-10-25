@@ -20,4 +20,9 @@ public class Mentor extends Pessoa {
     public void setLinguagemDeProgramacao(String linguagemDeProgramacao) {
         this.linguagemDeProgramacao = linguagemDeProgramacao;
     }
+
+    public void obterinformacoes() {
+        System.out.println("Linguagem: " + linguagemDeProgramacao);
+    }
+
 }

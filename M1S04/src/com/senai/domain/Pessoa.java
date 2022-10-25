@@ -12,6 +12,10 @@ public class Pessoa {
         this.idade = idade;
     }
 
+    public void obterinformacoes() {
+        System.out.println("Nome: " + nome + "\nIdade: " + idade);
+    }
+
     public String getNome() {
         return nome;
     }
