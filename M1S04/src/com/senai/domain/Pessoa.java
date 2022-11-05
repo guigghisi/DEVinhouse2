@@ -2,12 +2,12 @@ package com.senai.domain;
 
 public class Pessoa {
     private String nome;
-    private Integer idade;
+    private String idade;
 
     public Pessoa() {
     }
 
-    public Pessoa(String nome, Integer idade) {
+    public Pessoa(String nome, String idade) {
         this.nome = nome;
         this.idade = idade;
     }
@@ -24,11 +24,11 @@ public class Pessoa {
         this.nome = nome;
     }
 
-    public Integer getIdade() {
+    public String getIdade() {
         return idade;
     }
 
-    public void setIdade(Integer idade) {
+    public void setIdade(String idade) {
         this.idade = idade;
     }
 }

@@ -7,7 +7,7 @@ public class Coordenador extends Pessoa {
         super();
     }
 
-    public Coordenador(String nome, Integer idade, Integer quantidadeCursosCoord) {
+    public Coordenador(String nome, String idade, Integer quantidadeCursosCoord) {
         super(nome, idade);
         this.quantidadeCursosCoord = quantidadeCursosCoord;
     }

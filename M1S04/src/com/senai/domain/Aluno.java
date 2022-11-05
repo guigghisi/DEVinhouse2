@@ -8,7 +8,7 @@ public class Aluno extends Pessoa {
         super();
     }
 
-    public Aluno(String nome, Integer idade, String curso, String matricula) {
+    public Aluno(String nome, String idade, String curso, String matricula) {
         super(nome, idade);
         this.curso = curso;
         this.matricula = matricula;

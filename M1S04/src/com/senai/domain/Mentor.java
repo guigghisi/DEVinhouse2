@@ -7,7 +7,7 @@ public class Mentor extends Pessoa {
         super();
     }
 
-    public Mentor(String nome, Integer idade, String linguagemDeProgramacao) {
+    public Mentor(String nome, String idade, String linguagemDeProgramacao) {
         super(nome, idade);
         this.linguagemDeProgramacao = linguagemDeProgramacao;
     }
