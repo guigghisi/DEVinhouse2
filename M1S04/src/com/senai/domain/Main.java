@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.lang.System.out;
+
 public class Main {
     public static void main(String[] args) {
         int opt = 1;
@@ -40,17 +42,21 @@ public class Main {
                         mentores.add(mentor);
                         break;
                     case 0:
-                        System.out.println("Sair");
+                        out.println("Sair");
                         break;
                     default:
-                        System.out.println("Digite uma opção válida");
+                        out.println("Digite uma opção válida");
                         break;
                 }
             } catch (IndexOutOfBoundsException e) {
                 System.err.println("IndexOutOfBoundsException: " + e.getMessage());
+            } finally {
+                out.close();
             }
         } while (opt != 0);
 
 
     }
+
 }
+
