@@ -21,7 +21,9 @@ public class Mentor extends Pessoa {
         this.linguagemDeProgramacao = linguagemDeProgramacao;
     }
 
+    @Override
     public void obterinformacoes() {
+        super.obterinformacoes();
         System.out.println("Linguagem: " + linguagemDeProgramacao);
     }
 

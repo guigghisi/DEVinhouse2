@@ -30,7 +30,10 @@ public class Aluno extends Pessoa {
         this.matricula = matricula;
     }
 
+    @Override
     public void obterinformacoes() {
+        super.obterinformacoes();
         System.out.println("Curso: " + curso + "\nMatricula: " + matricula);
+
     }
 }
