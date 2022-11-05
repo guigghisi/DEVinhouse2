@@ -46,9 +46,8 @@ public class Main {
                         System.out.println("Digite uma opção válida");
                         break;
                 }
-            } catch (Exception e) {
-                System.out.println(e);
-
+            } catch (IndexOutOfBoundsException e) {
+                System.err.println("IndexOutOfBoundsException: " + e.getMessage());
             }
         } while (opt != 0);
 
